@@ -6,6 +6,9 @@
 }
 body
 {
+  display: flex;
+  align-items: center;
+  justifu-content: center;
   overflow: hidden;
 }
 #canvas
