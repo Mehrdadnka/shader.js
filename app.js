@@ -133,12 +133,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     gl.useProgram(program);
 
-    const positionAttributLocation = gl.getAttribLocation(program, 'a_position');
+    const positionAttributeLocation = gl.getAttribLocation(program, 'a_position');
     const positionBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
-    gl.enableVertexAttribArray(positionAttributLocation);
-    gl.vertexAttribPointer(positionAttributLocation, 2, gl.FLOAT, false, 0, 0);
+    gl.enableVertexAttribArray(positionAttributeLocation);
+    gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
 
     gl.uniform2f(gl.getUniformLocation(program, 'u_resolution'), gl.canvas.width, gl.canvas.height);
     gl.uniform1f(gl.getUniformLocation(program, 'u_time'), performance.now() / 1000);
