@@ -35,8 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       vec3 rd = normalize(i - ro);
 
-      //float radius = mix(0.3, 1.5, sin(t * 0.4) * 0.5 + 0.5);
-      float radius = 0.5;
+      float radius = mix(0.3, 1.5, sin(t * 0.4) * 0.5 + 0.5);
+      //float radius = 0.5;
       float dS, dO;
       vec3 p;
 
